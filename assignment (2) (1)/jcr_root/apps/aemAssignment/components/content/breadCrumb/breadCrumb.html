@@ -1,0 +1,13 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='apps.assignment'}"/>
+
+<ul class="breadcrumb" data-sly-use.breadcrumb="com.aem.project.components.BreadcrumbUse" data-sly-list.crumblist="${breadcrumb.pagenavList}">
+	<li data-sly-attribute.class="${crumblist.active}">
+     <sly data-sly-test="${!crumblistList.last}">
+                       		<a href="${crumblist.path}.html" data-sly-unwrap="${crumblist.active || crumblist.placeholder}">${crumblist.title}</a>
+                    </sly>
+
+    <sly data-sly-test="${crumblistList.last}">${crumblist.title ||
+                        crumblist.navigationTitle || crumblist.name}</sly>
+	</li>
+</ul>

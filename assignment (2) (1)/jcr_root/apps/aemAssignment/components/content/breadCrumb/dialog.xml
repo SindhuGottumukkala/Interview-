@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Breadcrumb">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <description
+                        jcr:primaryType="cq:Widget"
+                        bottommargin="{Boolean}true"
+                        hideLabel="{Boolean}true"
+                        text="Use this component to add a breadcrumb to a page. If all pages are hosted in AEM, the breadcrumbs will automatically populate"
+                        xtype="static"/>
+                    <instruction
+                        jcr:primaryType="cq:Widget"
+                        hideLabel="{Boolean}true"
+                        html="If you need to account for a page that is hosted outside of AEM, create a blank page within the AEM folder structure, and place a redirect on that page through &lt;b>Page Properties&lt;/b>"
+                        xtype="static"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>
